@@ -1,10 +1,10 @@
 # Tomcat7
 
 # Pull base image.
-FROM dtr.cucloud.net/cs/java8
+FROM dtr.cucloud.net/kuali/java8-kfs
 
 # File Author / Maintainer
-MAINTAINER Shawn Bower
+MAINTAINER Chad Bower
 
 COPY lib/ /usr/share/tomcat7/lib
 ADD appdynamics.tar /usr/share
