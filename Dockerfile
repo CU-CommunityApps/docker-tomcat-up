@@ -15,7 +15,4 @@ RUN \
   rm -rf /var/lib/apt/lists/* && \
   chown -R tomcat7:tomcat7 /usr/share/appdynamics
 
-COPY tomcat7 /etc/default
-RUN /bin/chown tomcat7:tomcat7 /etc/default/tomcat7 
-
 EXPOSE 8080
