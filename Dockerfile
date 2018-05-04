@@ -1,7 +1,7 @@
 # Tomcat7
 
 # Pull base image.
-FROM dtr.cucloud.net/kuali/java8-kfs
+FROM 078742956215.dkr.ecr.us-east-1.amazonaws.com/kuali/java8-kfs
 
 # File Author / Maintainer
 MAINTAINER Chad Bower
