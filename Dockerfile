@@ -1,6 +1,6 @@
 # Tomcat7
 # Pull Latest Java
-FROM adoptopenjdk/openjdk8:latest
+FROM adoptopenjdk/openjdk8:x86_64-ubuntu-jdk8u202-b08
 
 
 # File Author / Maintainer
