@@ -1,9 +1,6 @@
 # Tomcat7
-
 # Pull Latest Java
 FROM adoptopenjdk/openjdk8:latest
-RUN mkdir /opt/app
-COPY japp.jar /opt/app
 
 
 # File Author / Maintainer
