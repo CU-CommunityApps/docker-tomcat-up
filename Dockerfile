@@ -1,7 +1,10 @@
 # Tomcat7
 
-# Pull base image.
-FROM 078742956215.dkr.ecr.us-east-1.amazonaws.com/kuali/java8-kfs
+# Pull Latest Java
+FROM adoptopenjdk/openjdk8:latest
+RUN mkdir /opt/app
+COPY japp.jar /opt/app
+
 
 # File Author / Maintainer
 MAINTAINER Chad Bower
