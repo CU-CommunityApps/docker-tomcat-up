@@ -1,6 +1,6 @@
 # Tomcat7
 # Pull Latest Java
-FROM adoptopenjdk/openjdk8:x86_64-ubuntu-jdk8u202-b08
+FROM adoptopenjdk/openjdk8:latest
 
 
 # File Author / Maintainer
@@ -11,8 +11,8 @@ ADD appdynamics.tar /usr/share
 
 RUN \
   apt-get update && \
-  apt-get install -y tomcat7 && \
+  apt-get install -y tomcat8 && \
   rm -rf /var/lib/apt/lists/* && \
-  chown -R tomcat7:tomcat7 /usr/share/appdynamics
+  chown -R tomcat8:tomcat8 /usr/share/appdynamics
 
 EXPOSE 8080
