@@ -13,7 +13,7 @@ RUN echo "\ndeb http://us.archive.ubuntu.com/ubuntu/ xenial main\ndeb http://us.
 RUN \
   apt-get update && \
   apt-get install -y tomcat7 && \
-  rm -rf /var/lib/apt/lists/* && 
+  rm -rf /var/lib/apt/lists/* 
 
 
 EXPOSE 8080
