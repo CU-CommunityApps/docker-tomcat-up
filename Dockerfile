@@ -8,7 +8,7 @@ MAINTAINER Chad Bower
 RUN apt-get update 
 
 COPY lib/ /usr/share/tomcat7/lib
-RUN echo "\ndeb http://us.archive.ubuntu.com/ubuntu/ xenial main\ndeb http://us.archive.ubuntu.com/ubuntu/ xenial universe" >> /etc/apt/sources.list 
+RUN echo "\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial universe\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial universe\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-updates universe\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-updates universe\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse\ndeb http://security.ubuntu.com/ubuntu xenial-security universe\ndeb-src http://security.ubuntu.com/ubuntu xenial-security universe\n" >> /etc/apt/sources.list 
 
 RUN \
   apt-get update && \
