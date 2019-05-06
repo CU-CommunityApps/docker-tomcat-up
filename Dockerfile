@@ -21,7 +21,7 @@ mkdir -p /infra/cynergy_home
 RUN \
   apt-get update && \
   apt-get install -y tomcat7 && \
-  chown -R tomcat7:tcadm /infra && \
+  chown -R tomcat7:tomcat7 /infra && \
   chmod -R 755 /infra && \
   rm -rf /var/lib/apt/lists/* 
 
