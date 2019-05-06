@@ -14,7 +14,8 @@ RUN echo "\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial universe\
 RUN \
 mkdir -p /infra/work && \
 mkdir -p /infra/conf/keystores && \
-mkdir -p /infra/logs/tomcat && 
+mkdir -p /infra/logs/tomcat && \
+mkdir -p /infra/cynergy_home  
 
 
 RUN \
