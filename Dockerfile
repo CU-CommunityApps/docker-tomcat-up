@@ -6,7 +6,7 @@ FROM adoptopenjdk/openjdk8:latest
 # File Author / Maintainer
 MAINTAINER Chad Bower
 RUN \ 
-apt-get update && apt-get install --no-install-recommends -y \
+apt-get update && apt-get install --no-install-recommends -y && \
 clamav-daemon && \
 clamav
 
