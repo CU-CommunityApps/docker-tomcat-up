@@ -11,6 +11,14 @@ COPY lib/ /usr/share/tomcat7/lib
 RUN cp /etc/apt/sources.list  /etc/apt/sources.list-bak
 RUN echo "\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial universe\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial universe\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-updates universe\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-updates universe\ndeb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse\ndeb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse\ndeb http://security.ubuntu.com/ubuntu xenial-security universe\ndeb-src http://security.ubuntu.com/ubuntu xenial-security universe\n" >> /etc/apt/sources.list 
 
+#Clamav stuff
+RUN freshclam -v && \
+ mkdir /var/run/clamav && \
+ chown clamav:clamav /var/run/clamav && \
+ chmod 750 /var/run/clamav
+
+COPY conf/clamd.conf /etc/clamav/clamd.conf
+
 RUN \
 mkdir -p /infra/work && \
 mkdir -p /infra/conf/keystores && \
